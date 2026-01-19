@@ -64,6 +64,32 @@ This file enables LangGraph to:
   "env": "./.env"
 }
 
+## Steps to Setup Environment
+pip install -U uv
+
+## Clone Repo
+git clone https://github.com/kaushikpichumani/BlogGenerationAgent.git
+cd BlogGenerationAgent
+
+## Pin python version
+uv python pin 3.11
+
+## initialize the uv to initialize the project space
+uv init
+
+## Create Venv
+uv venv
+source .venv/bin/activate
+
+## install dependencies from requirements.txt
+uv add -r requirements.txt
+
+## To do test run 
+
+python app.py
+
+## To test we can use postman 
+
 ## ▶️ Running the LangGraph Dev Server
 
 This project uses **`uv` for environment and dependency management**.  
@@ -73,6 +99,31 @@ As a result, all CLI commands **must be executed within the `uv`-managed virtual
 
 ```bash
 uv run langgraph dev
+
+
+## 🧠 LangGraph Workflow Diagram
+
+The following diagram illustrates the **LangGraph execution flow** used by the Blog Generation Agent.  
+It shows how the agent progresses through each node in a structured and deterministic manner.
+
+<p align="center">
+  <img src="./graphStructure.png" alt="LangGraph Blog Generation Workflow" width="700"/>
+</p>
+
+### Workflow Overview
+
+
+## 🧠 Output from LangSmith
+
+The following diagram illustrates the sample output of the orchestration.
+
+<p align="center">
+  <img src="./Op.png" alt="Final Output" width="700"/>
+</p>
+
+### Workflow Overview
+
+
 
 
 
