@@ -41,28 +41,7 @@ Each node performs a dedicated responsibility, making the system modular, debugg
 ## 📦 Project Structure
 
 
-## 🧩 `langgraph.json` Configuration
 
-The `langgraph.json` file defines how LangGraph discovers, loads, and runs graphs in this project. It acts as the **entry-point configuration** for the LangGraph CLI and is required when running the project using the development server.
-
-This file enables LangGraph to:
-- Locate graph definitions
-- Load project dependencies
-- Inject environment variables
-- Expose graphs in the LangGraph Dev UI and LangSmith
-
----
-
-### 📄 `langgraph.json`
-
-```json
-{
-  "dependencies": ["."],
-  "graphs": {
-    "blog_generator_agent": "./src/graphs/graph_builder.py:graph"
-  },
-  "env": "./.env"
-}
 
 ## Steps to Setup Environment
 pip install -U uv
@@ -121,7 +100,31 @@ The following diagram illustrates the sample output of the orchestration.
   <img src="./Op.png" alt="Final Output" width="700"/>
 </p>
 
-### Workflow Overview
+
+
+## 🧩 `langgraph.json` Configuration
+
+The `langgraph.json` file defines how LangGraph discovers, loads, and runs graphs in this project. It acts as the **entry-point configuration** for the LangGraph CLI and is required when running the project using the development server.
+
+This file enables LangGraph to:
+- Locate graph definitions
+- Load project dependencies
+- Inject environment variables
+- Expose graphs in the LangGraph Dev UI and LangSmith
+
+---
+
+### 📄 `langgraph.json`
+
+```json
+{
+  "dependencies": ["."],
+  "graphs": {
+    "blog_generator_agent": "./src/graphs/graph_builder.py:graph"
+  },
+  "env": "./.env"
+}
+```json
 
 
 
