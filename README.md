@@ -74,9 +74,9 @@ python app.py
 This project uses **`uv` for environment and dependency management**.  
 As a result, all CLI commands **must be executed within the `uv`-managed virtual environment**.
 
-### ✅ Correct Command
+### ✅ Running in Langserve
 
-```bash
+
 uv run langgraph dev
 
 
