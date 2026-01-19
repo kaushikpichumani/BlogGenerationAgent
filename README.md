@@ -64,4 +64,15 @@ This file enables LangGraph to:
   "env": "./.env"
 }
 
+## ▶️ Running the LangGraph Dev Server
+
+This project uses **`uv` for environment and dependency management**.  
+As a result, all CLI commands **must be executed within the `uv`-managed virtual environment**.
+
+### ✅ Correct Command
+
+```bash
+uv run langgraph dev
+
+
 
